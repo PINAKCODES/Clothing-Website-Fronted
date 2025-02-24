@@ -1,0 +1,667 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes loaderOut {
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.slide-up {
+    animation: slideUp 0.8s ease forwards;
+}
+
+.nav-link {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.nav-link:nth-child(1) { animation-delay: 0.1s; }
+.nav-link:nth-child(2) { animation-delay: 0.2s; }
+.nav-link:nth-child(3) { animation-delay: 0.3s; }
+.nav-link:nth-child(4) { animation-delay: 0.4s; }
+
+/* Add more animations */
+
+@keyframes imageZoom {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.hero-image img {
+    animation: imageZoom 1.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.collection-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.collection-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.collection-item:hover {
+    animation: cardFloat 3s ease-in-out infinite;
+}
+
+.collection-item:nth-child(1) { animation-delay: 0.2s; }
+.collection-item:nth-child(2) { animation-delay: 0.4s; }
+.collection-item:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Card hover animation */
+@keyframes cardFloat {
+    0% {
+        transform: translateY(-15px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Button hover animation */
+@keyframes buttonPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(201, 167, 124, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(201, 167, 124, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(201, 167, 124, 0);
+    }
+}
+
+/* Apply animations to elements */
+.hero-content {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.about-content {
+    opacity: 0;
+    animation: slideInLeft 1s ease forwards;
+}
+
+.about-image {
+    opacity: 0;
+    animation: slideInRight 1s ease forwards;
+}
+
+.cta-button, .secondary-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:hover, .secondary-button:hover {
+    animation: buttonPulse 1s infinite;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Footer animations */
+.footer-content {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.social-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--accent-color);
+    transform: translateX(-101%);
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover::after {
+    transform: translateX(0);
+}
+
+/* Header animation on scroll */
+@keyframes headerSlideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Hero title animation */
+@keyframes titleReveal {
+    from {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes lineGrow {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100px;
+    }
+}
+
+/* Lookbook hover effects */
+@keyframes captionSlideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Newsletter form animation */
+@keyframes formFocus {
+    0% {
+        box-shadow: 0 0 0 0 rgba(201, 167, 124, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(201, 167, 124, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(201, 167, 124, 0);
+    }
+}
+
+.hero-title {
+    animation: titleReveal 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.hero-title::after {
+    animation: lineGrow 0.8s ease forwards 1s;
+}
+
+.newsletter-form input:focus {
+    animation: formFocus 1s infinite;
+}
+
+/* Add smooth reveal for footer elements */
+.footer-content > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.footer-top { animation-delay: 0.2s; }
+.footer-links { animation-delay: 0.4s; }
+.footer-bottom { animation-delay: 0.6s; }
+
+/* Scroll Reveal Animations */
+@keyframes revealFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes revealFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Card Hover Animation */
+@keyframes cardFloat {
+    0% {
+        transform: translateY(-15px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Apply animations to elements */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.collection-item.visible {
+    animation: scaleReveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.lookbook-item.visible {
+    animation: revealFromBottom 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Enhanced card animations */
+@keyframes cardZoom {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        transform: scale(1.05);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@keyframes detailsSlideUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-40px);
+    }
+}
+
+/* Hero video animation */
+@keyframes videoScale {
+    0% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.hero-video {
+    animation: videoScale 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* Hero content animations */
+.hero-title {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    animation: revealText 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.hero-subtitle,
+.hero-description {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.hero-subtitle {
+    animation: fadeInUp 0.8s ease forwards 0.5s;
+}
+
+.hero-description {
+    animation: fadeInUp 0.8s ease forwards 0.7s;
+}
+
+.hero-buttons {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards 1s;
+}
+
+@keyframes revealText {
+    0% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes slideInNotification {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.cart-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent-color);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 4px;
+    animation: slideInNotification 0.3s ease forwards;
+    z-index: 1000;
+}
+
+/* Add to Cart Button Animation */
+@keyframes addToCart {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.adding {
+    animation: addToCart 0.4s ease;
+}
+
+/* Cart Notification Animation */
+@keyframes slideInNotification {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.cart-notification {
+    animation: slideInNotification 0.3s ease forwards;
+}
+
+/* About section animations */
+.about-card.slide-up {
+    opacity: 0;
+    transform: translateY(100px) rotateX(-10deg);
+    animation: cardSlideUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes cardSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px) rotateX(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+    }
+}
+
+.about-header .fade-in {
+    opacity: 0;
+    animation: titleFadeIn 1.2s ease forwards;
+}
+
+@keyframes titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-card:hover .card-icon img {
+    animation: iconFloat 2s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        filter: brightness(0.9) sepia(0.2);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.1);
+        filter: brightness(1.1) sepia(0.3);
+    }
+}
+
+/* Add floating particles effect */
+.about-card::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.about-card:hover::after {
+    animation: particleFloat 1.5s ease-in-out infinite;
+    opacity: 0.2;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(100px, -100px) scale(2);
+    }
+    100% {
+        transform: translate(200px, 0) scale(0);
+    }
+}
+
+/* Scroll reveal animation */
+.about-section.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.about-section.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card hover state animations */
+.about-card:hover {
+    animation: cardPulse 1s ease infinite;
+}
+
+@keyframes cardPulse {
+    0%, 100% {
+        transform: translateY(-20px) rotateX(10deg) scale(1);
+    }
+    50% {
+        transform: translateY(-20px) rotateX(10deg) scale(1.02);
+    }
+}
+
+/* Lookbook Item Hover Animation */
+@keyframes imageZoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.15);
+    }
+}
+
+.lookbook-item:hover img {
+    animation: imageZoom 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.lookbook-item:hover .lookbook-caption {
+    animation: captionSlideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Add shine effect */
+@keyframes shine {
+    from {
+        background-position: 200% center;
+    }
+    to {
+        background-position: -200% center;
+    }
+}
+
+.collection-item::after,
+.lookbook-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.collection-item:hover::after,
+.lookbook-item:hover::after {
+    transform: translateX(100%);
+}
+
+/* Cart Animations */
+@keyframes cartUpdated {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.cart-updated {
+    animation: cartUpdated 0.3s ease;
+}
+
+@keyframes cartItemRemove {
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.cart-item.removing {
+    animation: cartItemRemove 0.3s ease forwards;
+}
+
+@keyframes cartNotification {
+    0% { transform: translateY(100%); opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    90% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(100%); opacity: 0; }
+}
+
+.cart-notification {
+    animation: cartNotification 2.3s ease forwards;
+}
+
+.cart-notification.fade-out {
+    animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+} 

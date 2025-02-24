@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AEOS - Luxury Fashion</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-content">
+            <span>AEOS</span>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <h1>AEOS</h1>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#collections" class="nav-link">Collections</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#lookbook" class="nav-link">Lookbook</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-cart">
+            <button class="cart-btn">Cart (0)</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">AEOS</h1>
+            <p class="hero-subtitle">Redefining Luxury</p>
+            <p class="hero-description">Experience timeless elegance and contemporary design through our curated collection of luxury fashion.</p>
+            <div class="hero-buttons">
+                <a href="#collections" class="cta-button">Explore Collection</a>
+            </div>
+        </div>
+        <div class="hero-media">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="https://cdn.pixabay.com/video/2015/11/11/1331-147084832_large.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="collections" class="featured-collection scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">Latest Collection</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <span class="dot"></span>
+                    <span class="line"></span>
+                </div>
+                <p class="section-subtitle">Discover our newest arrivals in luxury fashion</p>
+            </div>
+            
+            <div class="collection-grid">
+                <div class="collection-item" data-hover="true" data-price="599">
+                    <div class="item-image">
+                        <img src="https://cdn.pixabay.com/photo/2020/10/26/18/20/man-5688156_1280.jpg" alt="Essential Blazer">
+                    </div>
+                    <div class="item-details">
+                        <h3>The Essential Blazer</h3>
+                        <p class="price">$599</p>
+                        <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                    <div class="item-overlay">
+                        <div class="overlay-content">
+                            <span class="view-details">View Details</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="collection-item" data-hover="true" data-price="799">
+                    <div class="item-image">
+                        <img src="https://cdn.pixabay.com/photo/2015/12/31/08/01/honor-1115325_1280.jpg" alt="Silk Evening Dress">
+                    </div>
+                    <div class="item-details">
+                        <h3>Shirt</h3>
+                        <p class="price">$799</p>
+                        <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                    <div class="item-overlay">
+                        <div class="overlay-content">
+                            <span class="view-details">View Details</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="collection-item" data-hover="true" data-price="899">
+                    <div class="item-image">
+                        <img src="https://cdn.pixabay.com/photo/2019/02/22/20/37/pants-4014385_1280.jpg" alt="Wool Coat">
+                    </div>
+                    <div class="item-details">
+                        <h3>Jeans</h3>
+                        <p class="price">$899</p>
+                        <button class="add-to-cart-btn" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                    <div class="item-overlay">
+                        <div class="overlay-content">
+                            <span class="view-details">View Details</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section scroll-reveal">
+            <div class="about-content">
+                <h2>Crafted with Excellence</h2>
+                <p>AEOS represents the pinnacle of luxury fashion, where timeless elegance meets contemporary design. Each piece is meticulously crafted using the finest materials.</p>
+                <button class="secondary-button">Learn More</button>
+            </div>
+            <div class="about-image">
+                <img src="https://cdn.pixabay.com/photo/2018/10/16/11/36/machine-3751278_1280.jpg" alt="AEOS Atelier">
+            </div>
+        </section>
+
+        <section id="lookbook" class="lookbook scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">SS24 Lookbook</h2>
+                <div class="title-decoration">
+                    <span class="line"></span>
+                    <span class="dot"></span>
+                    <span class="line"></span>
+                </div>
+                <p class="section-subtitle">Discover our seasonal collection through artistic expression</p>
+            </div>
+            <div class="lookbook-grid">
+                <div class="lookbook-item main-item">
+                    <img src="https://images.pexels.com/photos/6626903/pexels-photo-6626903.jpeg" alt="Modern Edit">
+                    <div class="lookbook-caption">
+                        <h3>The Modern Edit</h3>
+                        <p>Contemporary silhouettes for the urban sophisticate</p>
+                    </div>
+                </div>
+                <div class="lookbook-item">
+                    <img src="https://cdn.pixabay.com/photo/2022/08/05/16/28/african-man-7367180_1280.jpg" alt="Evening Elegance">
+                    <div class="lookbook-caption">
+                        <h3>Evening Elegance</h3>
+                        <p>Timeless pieces for memorable nights</p>
+                    </div>
+                </div>
+                <div class="lookbook-item">
+                    <img src="https://cdn.pixabay.com/photo/2024/11/08/05/28/man-9182458_1280.jpg" alt="Casual Luxury">
+                    <div class="lookbook-caption">
+                        <h3>Casual Luxury</h3>
+                        <p>Effortless style for everyday moments</p>
+                    </div>
+                </div>
+                <div class="lookbook-item">
+                    <img src="https://cdn.pixabay.com/photo/2022/09/09/12/35/african-man-7442929_1280.jpg" alt="Statement Collection">
+                    <div class="lookbook-caption">
+                        <h3>The Statement Collection</h3>
+                        <p>Bold designs that define the season</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <h3>AEOS</h3>
+                    <p>Redefining Luxury Fashion</p>
+                </div>
+                <div class="newsletter">
+                    <h4>Subscribe to Our Newsletter</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit" class="submit-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Collections</a>
+                    <a href="#">Accessories</a>
+                </div>
+                <div class="footer-column">
+                    <h4>About</h4>
+                    <a href="#">Our Story</a>
+                    <a href="#">Sustainability</a>
+                    <a href="#">Craftsmanship</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <a href="#">Contact</a>
+                    <a href="#">Shipping</a>
+                    <a href="#">Returns</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+                <p class="copyright">© 2024 AEOS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-amount">$0</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
